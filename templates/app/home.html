@@ -1,0 +1,677 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- fonts-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ribeye+Marrow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Ribeye+Marrow&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
+<!-- font awsome icon link -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+ <style>
+  body{
+            margin:0;
+            padding:0;
+            
+            background-color:black;
+            color:white;
+            text-align:center;
+        }
+
+
+        .banner-heading{
+            font-size:26px; 
+            font-family:sans-serif;
+            font-style: normal;
+          
+        }
+        .banner-bio{
+            font-family:Roboto,sans-serif;
+            font-size:15px;
+            
+           
+        }
+        .banner-bio-part{
+            background: linear-gradient(to right, #e0f00e, #a8e37a);
+          color: transparent; 
+          background-clip: text; 
+          -webkit-background-clip: text; 
+          font-weight: bold; 
+        
+
+        }
+        .banner-btn{
+            background-color:yellow;
+            font-family:Roboto,sans-serif;
+            border-radius:5px;
+           
+        }
+        .banner-btn-heading{
+            text-decoration:none;
+            color:black;
+           
+        }
+       
+        .category-heading{
+            font-size:35px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+           
+        }
+        .category-heading-part {
+          background: linear-gradient(to right, #e0f00e, #a8e37a); /* Gradient from #e0f00e to a lighter shade */
+          color: transparent; /* Make the text transparent to see the gradient */
+          background-clip: text; /* Clip the background to the text */
+          -webkit-background-clip: text; /* For Safari compatibility */
+          font-size: 35px; /* Example font size */
+          
+        }
+        .category-image{
+          background-color:#34ebdb;
+
+        }
+        .technology-heading{
+          font-size:35px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          
+
+        }
+        .technolog-name-box{
+          
+          overflow:none;
+          border-radius:10px;
+           
+          box-shadow: 0 -3px 5px rgba(255, 255, 0, 0.5), /* Top shadow */
+            3px 0 6px rgba(255, 255, 0, 0.5),  /* Right shadow */
+            0 5px 7px rgba(255, 255, 0, 0.5),  /* Bottom shadow */
+           -3px 0 5px rgba(255, 255, 0, 0.5); /* Left shadow */
+
+          
+        }
+        .technology-item{
+          text-align:left;
+        }
+        .technology-disc{
+          color:#adb7c7;
+        }
+        .logo-image img{
+          border-radius:3px;
+        }
+        .ribeye-marrow-regular {
+         font-family: "Ribeye Marrow", serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size:35px;
+        }
+        .checked {
+          color: #ffc107; /* Use any color you like for filled stars */
+        }
+        .rating-num{
+           font-size:50px;
+           font-family: "Roboto", sans-serif;
+          
+        }
+        .review-box{
+          
+          overflow:none;
+          border-radius:10px;
+           
+          box-shadow: 
+            0 -1px 2px rgba(255, 255, 255, 0.3), /* Top shadow */
+            1px 0 2px rgba(255, 255, 255, 0.3),  /* Right shadow */
+            0 1px 2px rgba(255, 255, 255, 0.3),  /* Bottom shadow */
+           -1px 0 2px rgba(255, 255, 255, 0.3); /* Left shadow */
+           background-color:white;
+           color:black;
+
+
+          
+        }
+        .review-item{
+          text-align:left;
+        }
+        .review-disc{
+          color:#adb7c7;
+          max-height: 100%; /* Ensures paragraphs don't exceed the height */
+          overflow: hidden; /* Hides overflowing text */
+          margin: 0; /* Remove default margin */
+          transition: max-height 0.5s ease; /* Optional: Add a smooth transition effect */
+        }
+         
+        
+        .review-cmd{
+          color:#adb7c7;
+          max-height: 100px; /* Set your desired height */
+          overflow: hidden; /* Hide both scrollbars */
+          position: relative; /* Establish a positioning context */
+        
+        }
+      
+        .review-cmd::after {
+          content: '';
+          display: block;
+          height: 100%; /* Take full height */
+          width: 100%; /* Take full width */
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background: linear-gradient(to bottom, transparent 0%, white 100%); /* Gradient to hide overflow */
+          pointer-events: none; /* Ensure clicks go through */        
+}   
+
+.fixed-buttons {
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from bottom */
+            right: 20px; /* Distance from right */
+            z-index: 999; /* Above other content */
+        }
+.logo-text{
+  font-family: "Playwrite GB S", cursive;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size:25px;
+}
+
+ 
+
+ </style>
+    
+  </head>
+  <body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+               <i class="fa-solid fa-b me-2" style="font-size: 24px; color: #3498db;"></i> <!-- Icon with custom color -->
+                <span class="logo-text">
+                    <span class="text-primary logo-text">b</span>
+                    <span class="logo-text" style="color: #e74c3c;">i</span>
+                    <span class="logo-text" style="color: #f1c40f;">t</span>
+                    <span class="logo-text" style="color: #2ecc71;">b</span>
+                    <span class="logo-text" style="color: #9b59b6;">y</span>
+                    <span class="logo-text" style="color: #e67e22;">b</span>
+                    <span class="logo-text" style="color: #1abc9c;">y</span>
+                    <span class="logo-text" style="color: #34495e;">t</span>
+                    <span class="logo-text" style="color: #d35400;">e</span>
+                </span>
+             </a>
+            {% comment %} <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end d-none" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Platforms & Products</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle custom-nav-link" href="#" data-bs-toggle="dropdown">Industries</a>
+                        <div class="dropdown-menu"></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Insights</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="#">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link custom-nav-link" href="#">About</a></li>
+                    <li class="nav-item custom-nav-link"><button class="btn btn-light" type="submit">Login</button></li>
+                    <li class="nav-item">
+                      <a class="nav-link custom-nav-link" href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-search" viewBox="0 0 16 16">
+                              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                          </svg>
+                      </a> 
+                  </li>
+                </ul>
+            </div> {% endcomment %}
+        </div>
+    </nav>
+
+    <!-- Background image slider -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(' {% static 'images/back_img3.jpg' %}');">
+                <div class="carousel-caption">
+                    <h1>Welcome to a New Era of Web Development and online business</h1>
+                    <p>Explore a groundbreaking era in web development, where professionalism, innovation, and seamless design converge to elevate your online presence</p>
+                    <button class="btn"><a href="#">Contact Us</a></button>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url('{% static 'images/back_img15.avif ' %}');">
+                <div class="carousel-caption">
+                    <h1>Step into the Future of Digital Design, where creativity, functionality, and advanced technology</h1>
+                    <p>Discover the future of digital design, blending creativity, functionality, and cutting-edge technology to deliver unique and engaging online experiences.</p>
+                    <button class="btn"><a href="#">Contact Us</a></button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div>
+      
+  </div>
+     
+
+
+
+    <!-- Banner Section -->
+    <div class=" container d-flex justify-content-center align-items-center flex-column ">
+        <div class="p-2 banner-heading mt-4 mb-1">Are You Looking For a Web development and Web design company?
+        </div>
+        <div class=" banner-bio">If you are a business owner or professional who is pretty serious about it,     then we will save you some time. YES you do need a good <p> <span class="banner-bio-part";> Web design and development </span>  which can provide you an awesome website. We build a Consumer Centered, Responsive Website with Intuitive Navigation for your Business.</p> 
+        </div>
+        <div class="p-2 ">
+            <div class="d-flex justify-content-center align-items-center banner-btn">
+                <p class="text-dark text-center m-2 mx-3 "><a href="/demobook/" class="banner-btn-heading">Book Your Free Damo Now! </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+     <!-- Category Section -->
+
+    <div class=" container d-flex justify-content-center align-items-center flex-column mt-4">
+        <div class="p-2 category-heading">Type Of <span class="category-heading-part" >Website Developement</span> We Provide!
+        </div>
+      <div class="container p-5">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_ecom.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">E-Commerce website</h5>
+                        <div class="card__data">
+                            <span class="card__description">An eCommerce website allows you to sell products from your online store with best web design.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_business.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Business website</h5>
+                        <div class="card__data">
+                            <span class="card__description">Creating a consulting website or a startup website, a business website establishes your brand’s online presence with marketing-friendly web design.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_blog.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Blog website</h5>
+                        <div class="card__data">
+                            <span class="card__description">Blogs are a space for people to share written and visual content about whatever they desire.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_portfolio.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Portfolio website</h5>
+                        <div class="card__data">
+                            <span class="card__description">Creative professionals, such as graphic designers, artists and writers, use portfolio websites to consolidate and display examples of their work.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_Event.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Event website</h5>
+                        <div class="card__data">
+                            <span class="card__description">Event website allows for streamlined event management, from invites to marketing, and even through follow-up.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_personal.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Personal website</h5>
+                        <div class="card__data">
+                            <span class="card__description">A personal website is a great way to give your online presence a boost with Top-notch Web Design.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src=" {% static 'images/card_img_member.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Membership website</h5>
+                        <div class="card__data">
+                            <span class="card__description">A membership website & it's web design hierarchy ensures exclusivity by requiring visitors to sign up or pay a fee to receive full access to its services, tools or resources.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src="{% static 'images/card_img_non.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Non-profit website</h5>
+                        <div class="card__data">
+                            <span class="card__description">We provide Non-profit website development for NGO's to collect donations online and to manage them.</span>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="col">
+                <!-- Wrapper for the stacked cards -->
+                <div class="card-stack">
+                    <div class="card h-100 upper-card">
+                        <img src="{% static 'images/card_img_inform.jpg' %}" class="card-img-top rounded" alt="...">
+                    </div>
+                    <div class="card h-100 lower-card">
+                        <h5 class="card-title">Informational website</h5>
+                        <div class="card__data">
+                            <span class="card__description">Informational websites act as a resource to convey information. Examples include encyclopedias and news outlet websites.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+    
+      
+        
+    </div>
+
+
+  <!-- our Technology -->
+   <div class=" container d-flex justify-content-center align-items-center flex-column mt-4">
+        <div class="p-2 technology-heading">Type Of Our Technology Stack for Web Design
+        </div>
+
+       <!-- our Technology 1 -->
+        <div class="p-2">
+             <div class="row">
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/django-logo1.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>Django</h5>
+                     <span class="technology-disc"><p class="m-0">robust, scalable web <p class="m-0">framework for secure, </p>  dynamic, database-driven  <p>applications.</p>
+                     </span>
+                     </p>
+                  </div>
+               </div>
+
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/react-logo.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>ReactJS</h5>
+                     <span class="technology-disc"><p class="m-0">component-based, reusable <p class="m-0"> UI library for fast,</p>   dynamic, single-page  <p>applications.</p>
+                     </span>
+                     
+                     </p>
+                  </div>
+               </div>
+
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/anglular-logo.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>AngularJS</h5>
+                     <span class="technology-disc"><p class="m-0">powerful, MVW framework <p class="m-0">for building dynamic,</p> scalable,single-page<p> applications.</p>
+                     </span>
+                     </p>
+                  </div>
+               </div>
+             </div>    
+        </div>  
+        
+        <!-- our Technology 2 -->
+        <div class="p-2">
+             <div class="row">
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/python-logo.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>Python</h5>
+                     <span class="technology-disc"><p class="m-0">versatile, high-level language  <p class="m-0">for web development, data  </p>  analysis, automation,  <p> AI.</p>
+                     </span>
+                     </p>
+                  </div>
+               </div>
+
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/java-logo.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>Java</h5>
+                     <span class="technology-disc"><p class="m-0">object-oriented, platform-independent  <p class="m-0">language for building </p> scalable, secure  <p>applications.</p>
+                     </span>
+                     
+                     </p>
+                  </div>
+               </div>
+
+               <div class="row col-4 technolog-name-box m-3 p-2  " style="width: 18rem;">
+                  <div class="col-2 p-2 logo-image ">
+                    <img src="{% static 'images/sql-logo.png' %}" alt="Description of the image" width="35" height="35">
+                  </div>
+                  <div class="col-10 p-2 technology-item">
+                    <h5>SQL</h5>
+                     <span class="technology-disc"><p class="m-0">structured query language<p class="m-0"> for managing, retrieving, </p> and manipulating relational <p> databases.</p>
+                     </span>
+                     </p>
+                  </div>
+               </div>
+             </div>    
+        </div>
+        
+    
+
+
+  </div>
+
+
+  <!-- ================   REVIEW IN Website ============ -->
+   <div class=" container d-flex justify-content-center align-items-center  mt-3">
+        <div class="p-2 ribeye-marrow-regular me-5 ">Our Customers Rating</div>
+        <div>
+             <div class=" container d-flex justify-content-center align-items-center flex-column ms-3 ">
+                <div class="rating-num">4.4</div>
+                <div class="">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+             </div>
+        </div>
+        <a href="{% url 'review' %}" class="btn btn-warning m-4">Watch Review</a>
+   </div>
+
+
+ 
+
+
+<!-- FIXED BUTTONS -->
+
+
+
+<!-- Fixed Buttons Container -->
+<div class="fixed-buttons d-flex flex-column">
+    <!-- Button to Open Modal -->
+    <button class="btn btn-transparent" data-bs-toggle="modal" data-bs-target="#myModal"><img src="{% static 'images/message-logo1.png' %}" alt="WhatsApp" width="65" height="65"></button>
+
+    <!-- WhatsApp Button -->
+    <button class="btn btn-transparent">
+        <a href="https://wa.me/9307771481" target="_blank" class="btn btn-transparent">
+            <img src="{% static 'images/wp-logo.png' %}" alt="WhatsApp" width="65" height="65">
+        </a>
+    </button>
+</div>
+
+<!-- Modal Structure -->
+<div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white p-4">
+            <div class="modal-header">
+                <h5 class="modal-title model-title-message" id="myModalLabel">Contact Us</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="/">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Number:</label>
+                        <input type="tel" name="number" class="form-control" id="number" placeholder="Enter your number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Select Service</label>
+                        <select name="service" class="form-select" id="service" required>
+                            <option value="">Choose an option</option>
+                            <option value="website">Need a Website</option>
+                            <option value="app">Need an App</option>
+                            <option value="both">Need an App and Web</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Submit</button> <!-- Changed type to submit -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- ================== footer code ====================================================================-->
+ <!-- eight jumbotron footer-->
+ <footer class="bg-dark text-white mt-5">
+    <div class="container">
+        <div class="row py-4">
+            <!-- Name Section -->
+            <div class="col-md-3">
+                <h4 class="font-weight-bold">Contact Us</h4>
+                <p class="mb-1"><i class="fas fa-user"></i> <strong>Name:</strong> Tejas Chate</p>
+            </div>
+            <!-- Email Section -->
+            <div class="col-md-3">
+                <h4 class="font-weight-bold">Email</h4>
+                <p class="mb-1"><i class="fas fa-envelope"></i> <a href="mailto:info@example.com" class="text-white">tejaschate1404@gmail.com</a></p>
+            </div>
+            <!-- Phone Number Section -->
+            <div class="col-md-3">
+                <h4 class="font-weight-bold">Phone Number</h4>
+                <p class="mb-1"><i class="fas fa-phone-alt"></i> <a href="tel:+011234567890" class="text-white">+91 9307771481</a></p>
+            </div>
+            <!-- WhatsApp Section -->
+            <div class="col-md-3">
+                <h4 class="font-weight-bold">WhatsApp</h4>
+                <p class="mb-1">
+                    <a href="https://wa.me/9307771481" target="_blank" class="btn btn-success">
+                        <i class="fab fa-whatsapp"></i> Message Us
+                    </a>
+                </p>
+            </div>
+        </div>
+        <hr class="bg-white">
+        <div class="row">
+            <div class="col text-center">
+                <p class="mb-0">&copy; 2024 bitbybyte. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+ <!--eight container end-->
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

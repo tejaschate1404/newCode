@@ -1,0 +1,41 @@
+<!-- templates/accounts/signup.html -->
+{% extends 'app/base.html' %}
+
+{% block title %}Signup{% endblock %}
+
+{% block cssContent %}
+signup_form {
+    margin-top: 150px;
+}
+
+signup_name {
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+        <h2 class="text-center signup_name">Signup</h2>
+        <form method="POST" class="mt-4 signup_form">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="email" class="form-label">Email :</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password" class="form-label">Password :</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Confirm Password :</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Signup</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

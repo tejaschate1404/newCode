@@ -1,0 +1,172 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(82, 60%, 28%);
+  --title-color: hsl(0, 0%, 15%);
+  --text-color: hsl(0, 0%, 35%);
+  --body-color: hsl(0, 0%, 95%);
+  --container-color: hsl(0, 0%, 100%);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --h2-font-size: 1.25rem;
+  --small-font-size: .813rem;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1120px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== CARD ===============*/
+.container {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  overflow: hidden;
+  transform: scale(0.95); /* Initial inward scaling for the card */
+  transition: transform 0.3s ease; /* Smooth transition for the card */
+}
+
+/* Card image styles */
+.card__img {
+  width: 100%; /* Make the image take full width */
+  border-radius: 1.5rem;
+  transition: transform 0.3s ease; /* Smooth transition for the image */
+}
+
+/* Hover effect for card image */
+.card__article:hover .card__img {
+  transform: scale(0.9); /* Image scales inward on hover */
+}
+
+/* Card data styles */
+.card__data {
+  opacity: 0; /* Start as invisible */
+  visibility: hidden; /* Hidden initially */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease; /* Smooth fade and upward movement */
+}
+
+/* Show card data on hover */
+.card__article:hover .card__data {
+  opacity: 1; /* Fade in the card data */
+  visibility: visible; /* Make it visible */
+  transform: translateY(0); /* Slide up to original position */
+}
+
+/* Card description styles */
+.card__description {
+  opacity: 1; /* Always visible */
+  transition: opacity 0.3s ease; /* Smooth transition for the description */
+}
+
+/* Expand card outward on hover */
+.card__article:hover {
+  transform: scale(1.05); /* Slightly expand the card */
+  overflow: visible; /* Ensure content is visible */
+}
+
+/* Card title and button styles */
+.card__title {
+  font-size: var(--h2-font-size);
+  font-weight: 500;
+  color: var(--title-color);
+  margin-bottom: .75rem;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change title color on hover */
+.card__article:hover .card__title {
+  color: var(--first-color); /* Change title color on hover */
+}
+
+/* Button hover effect */
+.card__button {
+  text-decoration: none;
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  color: var(--first-color);
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Change button color on hover */
+.card__article:hover .card__button {
+  color: var(--title-color); /* Change button color on hover */
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 100vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card__img {
+    width: 348px;
+  }
+
+  .card__data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
